@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Select Category 🎯</h2>
+
+{% for category in categories %}
+    <div>
+        <a href="{% url 'quiz_page' category.id %}">
+            <button>{{ category.name }}</button>
+        </a>
+    </div>
+{% endfor %}
+
+{% endblock %}

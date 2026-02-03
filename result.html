@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Result</h2>
+
+{% if result == "correct" %}
+    <h3>✅ Correct Answer!</h3>
+{% else %}
+    <h3>❌ Wrong Answer</h3>
+    <p>Correct answer: {{ correct }}</p>
+{% endif %}
+
+<h3>Score: {{ score }}</h3>
+
+<a href="{% url 'quiz_page' category.id %}">
+    <button>Next Question ▶</button>
+</a>
+
+{% endblock %}
